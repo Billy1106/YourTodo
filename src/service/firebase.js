@@ -31,9 +31,8 @@ firebase.initializeApp({
 export const logOut =() =>{
     const auth = getAuth();
 signOut(auth).then(() => {
-  // Sign-out successful.
   document.location.reload();
 }).catch((error) => {
-  // An error happened.
+  
 });
 }

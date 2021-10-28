@@ -2,6 +2,7 @@ import firebase from "firebase/compat/app";
 import { collection, addDoc } from "firebase/firestore";
 import {db} from "./firebase"
 import { updateDoc,doc, getDoc,getDocs,query,where,orderBy,deleteDoc } from "firebase/firestore";
+
 export const initGet = async(uid) => {
     const q = query(collection(db, "todo"), where("uid", "==", uid), orderBy("createdAt"));
     const docSnap = await getDocs(q);
